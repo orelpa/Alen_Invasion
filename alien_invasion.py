@@ -5,6 +5,10 @@ def run_game():
     """Инициализирует игру и создает объект экрана"""
     pygame.init()
     screen = pygame.display.set_mode((1200, 800))
+    """
+    объект screen - назвается поврхностью - часть экрана на которой отображается
+    игровой элемент
+    """
     pygame.display.set_caption("Alien Invasion")
 
     #Запуск основного цикла игры
