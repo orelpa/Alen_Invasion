@@ -12,6 +12,7 @@ def check_events(ship):
                 # перемещаем корабль в право
                 ship.moving_right = True
         elif event.type == pygame.KEYUP:
+            #отпускает кнопку корабль останавливается
             if event.key == pygame.K_RIGHT:
                 ship.moving_right = False
 
