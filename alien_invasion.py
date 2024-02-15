@@ -2,6 +2,7 @@ import sys
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 def run_game():
     """Инициализирует игру и создает объект экрана"""
@@ -16,6 +17,9 @@ def run_game():
     """
     pygame.display.set_caption("Alien Invasion")
     
+    #создание корабля
+    ship = Ship(screen)
+
     #назначение цвета фона
     bg_color = (ai_settings.bg_color)
 
@@ -28,9 +32,12 @@ def run_game():
             
             #При каждом проходе цикла перерисовывается экран
             screen.fill(bg_color)
+            ship .blitme()
             if event.type == pygame.QUIT:
                 sys.exit()
             #отображение последнего прорисованного экрана
             pygame.display.flip()
+
+
 
 run_game()
