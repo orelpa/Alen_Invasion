@@ -7,10 +7,15 @@ def check_events(ship):
         if event.type == pygame.QUIT:
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            ship.moving_right = True
+
             if event.key  == pygame.K_RIGHT:
-                #перемещаем корабль в право
-                ship.moving_rig = False
+                # перемещаем корабль в право
+                ship.moving_right = True
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_RIGHT:
+                ship.moving_right = False
+
+
 
 def update_screen(ai_settings, screen, ship):
     """Обновляет изображения на экране и отображает новый экран"""
