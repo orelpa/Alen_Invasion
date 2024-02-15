@@ -30,7 +30,8 @@ def run_game():
     while True:
         #заменяем код на функцию
         gf.check_events(ship)
-        
+        ship.update()
+
         gf.update_screen(ai_settings, screen, ship)
         
 
