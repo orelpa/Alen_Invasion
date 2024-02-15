@@ -7,7 +7,7 @@ class Ship():
         self.screen = screen
 
         #Загрузка изображения корабля и получение прямоугольника
-        self.image = pygame.image.load('images/ship.bmp')
+        self.image = pygame.image.load('images/galactica.png')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
 

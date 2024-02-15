@@ -4,6 +4,8 @@ import pygame
 from settings import Settings
 from ship import Ship
 
+import game_functions as gf
+
 def run_game():
     """Инициализирует игру и создает объект экрана"""
     pygame.init()
@@ -19,24 +21,19 @@ def run_game():
     
     #создание корабля
     ship = Ship(screen)
-
+    
+    
     #назначение цвета фона
-    bg_color = (ai_settings.bg_color)
+    
 
     #Запуск основного цикла игры
     while True:
-        #Отслеживание событий клавиатуры и мыши
+        #заменяем код на функцию
+        gf.check_events(ship)
+        
+        gf.update_screen(ai_settings, screen, ship)
+        
 
-
-        for event in pygame.event.get():
-            
-            #При каждом проходе цикла перерисовывается экран
-            screen.fill(bg_color)
-            ship .blitme()
-            if event.type == pygame.QUIT:
-                sys.exit()
-            #отображение последнего прорисованного экрана
-            pygame.display.flip()
 
 
 
