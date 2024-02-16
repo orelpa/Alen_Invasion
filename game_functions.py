@@ -6,9 +6,12 @@ def check_events(ship):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             sys.exit()
+
+        #отслеживаем нажатие клавиш
         elif event.type == pygame.KEYDOWN:
 
-            if event.key  == pygame.K_RIGHT:
+            #если нажата клавиша в право
+            if event.key == pygame.K_RIGHT:
                 # перемещаем корабль в право
                 ship.moving_right = True
         elif event.type == pygame.KEYUP:
