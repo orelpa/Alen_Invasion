@@ -14,11 +14,18 @@ def check_events(ship):
             if event.key == pygame.K_RIGHT:
                 # перемещаем корабль в право
                 ship.moving_right = True
+
+            #если нажата клавиша в лево
+            elif event.key == pygame.K_LEFT:
+                #перемещаем корабль в лево
+                ship.moving_left = True
+
         elif event.type == pygame.KEYUP:
             #отпускает кнопку корабль останавливается
             if event.key == pygame.K_RIGHT:
                 ship.moving_right = False
-
+            elif event.key == pygame.K_LEFT:
+                ship.moving_left = False
 
 
 def update_screen(ai_settings, screen, ship):
